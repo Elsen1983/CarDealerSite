@@ -1,0 +1,723 @@
+/*---- Defaults ----*/
+html{
+    height: 100%;
+}
+
+nav, header, footer{
+    display: block;
+}
+
+body{
+    line-height: 0.75em;
+    margin: 0;
+    background-color: white;
+    /*https://css-tricks.com/snippets/css/fluid-typography/*/
+    /*  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+/*Rows and Columns*/
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+
+/*calculate width*/
+.col-1 { width: calc(100%/12*1);}
+.col-2 { width: calc(100%/12*2);}
+.col-3 { width: calc(100%/12*3);}
+.col-4 { width: calc(100%/12*4);}
+.col-5 { width: calc(100%/12*5);}
+.col-6 { width: calc(100%/12*6);}
+.col-7 { width: calc(100%/12*7);}
+.col-8 { width: calc(100%/12*8);}
+.col-9 { width: calc(100%/12*9);}
+.col-10 { width: calc(100%/12*10);}
+.col-11 { width: calc(100%/12*11);}
+.col-12 { width: calc(100%/12*12);}
+
+.header_back{
+    width: 100%;
+    height: 120px;
+}
+
+/* logo + business name + contacts */
+body div.container_top{
+    margin-bottom: 5px;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    /*min-height: 12.5%;*/
+    z-index: 6;
+}
+
+#container_top_gradient{
+    /*background: rgb(194, 194, 194);*/
+    background: #dbf1ff;
+    background: -webkit-linear-gradient(#e7ffe4,#dbf1ff);
+    background: -o-linear-gradient(#e7ffe4, #dbf1ff);
+    background: -moz-linear-gradient(#e7ffe4, #dbf1ff);
+    background: linear-gradient(#e7ffe4, #dbf1ff);
+}
+
+div.box{
+    text-align: center;
+}
+
+.logoContainer{
+    margin-left: 20%;
+}
+
+.logoClass{
+    height: 70px;
+    width: auto;
+    margin: auto;
+    padding-top: 3px;
+
+}
+.logoContainer img{
+    /*width: 55%;*/
+}
+
+div.siteNameText{
+    /*font-family: 'Russo One', sans-serif;*/
+    /*font-family: 'Monoton', cursive;*/
+    font-family: 'Audiowide', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    color: darkblue;
+    font-style: italic;
+    letter-spacing: 5px;
+    text-align: center;
+    text-shadow: 2px 2px 10px #ffffff, -1px -1px 5px #ffffff, 5px 5px 10px #257779;
+}
+div.siteNameText strong{
+    /*font-family: 'Monoton', cursive;*/
+    /*color: darkblue;*/
+    color: #000000;
+    font-size: 1.2em;
+    letter-spacing: 5px;
+}
+
+div.detailsContainer{
+    margin-right: 20%;
+    text-align: right;
+}
+div.detailsContainer label{
+    font-size: 0.70em;
+    font-weight: 600;
+    text-shadow:-2px 1px 2px #ffffff;
+}
+
+
+/*---- NAV BAR ----*/
+nav{
+    position: fixed;
+    z-index: 6;
+    top: 80px;
+    /*height: 40px;*/
+    width: 100%;
+    /*margin-bottom: 10px;*/
+    box-shadow: -2px -2px 7px 2px rgba(0,0,0,0.75), 2px 2px 7px 2px rgba(0,0,0,0.75);
+}
+
+nav ul{
+    background-color: #e8e8e8;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid #b2b2b2;
+    border-bottom: 2px solid #b2b2b2;
+}
+
+nav.top_nav{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav ul.top_nav li{
+    /*remove the bullet points*/
+    list-style: none;
+    /*move list element into a one row with floating*/
+    float: left;
+    padding-right: 5px;
+}
+
+nav ul.top_nav li:first-child{
+    margin-left: 4%;
+}
+ul.top_nav li:first-child a{
+    padding-left: 15px;
+}
+
+/*push it to the right side in the nav bar*/
+ul.top_nav li.top_nav_right{
+    float: right;
+    margin-right: 4%;
+}
+ul.top_nav li.top_nav_right a{
+    padding-right: 15px;
+}
+
+ul.top_nav li a{
+    display: block;
+    /*remove underline on anchor tags*/
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 1.05em;
+    font-weight: 600;
+    text-shadow: 3px 2px 4px #506eb4;
+}
+
+/*hover effect on menu element*/
+ul.top_nav li a:hover{
+    background-color: #004890;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+/*video one end here now*/
+
+/*Create DROP-DOWN icon for Nav Bar*/
+ul.top_nav li.drop_down_Icon{
+    /*change the trigram icon to invisible by display:none*/
+    display: none;
+}
+
+main{
+    background-color: #e7ffe4;
+    width: 100%;
+}
+
+/* ---- Middle container*/
+.container_mid_first{
+    margin-bottom: 5px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+div[class="row not_center"]{
+    align-items: normal;
+    margin-top: 5px;
+    box-shadow: #000000 -1px 1px 2px 2px, #000000 1px 1px 2px 2px;
+}
+
+[class*="middle"]{
+    height: 16em;
+    position: relative;
+}
+#ml_id1, #ml_id2, #ml_id3{
+    /*add a gif loader as background until all picture are downloaded and checked in JS*/
+    background: url("images/img_loader.gif") no-repeat center center;
+}
+main div.mid_left_active{
+    display: block;
+}
+main div.mid_left_one{
+    display: none;
+
+}
+main div.mid_left_two{
+    display: none;
+}
+main div a.ml_button1{
+    /*position: absolute;*/
+    /*top: 60%;*/
+    /*padding: 5px;*/
+    /*left: 20%;*/
+    /*width: 20%;*/
+    color: white;
+}
+
+main div.mid_left_one_buttons{
+    background: rgba(173, 173, 173, 0.51);
+    position: absolute;
+    border: #000000 double 1px;
+    top: 90%;
+    left: 78%;
+    width: 20%;
+    height: 8%;
+    padding: 0;
+    /*display:none because if the network is too slow then we won't see the buttons until the images downloaded...change in JS*/
+    display: none;
+    /*display: -webkit-flex; !* Safari *!*/
+    /*display: flex;*/
+    -webkit-align-items: center; /* Safari 7.0+ */
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+main div.gl_button{
+    position: relative;
+    width: 25%;
+    margin-left: 5%;
+    height: 1em;
+    border: none;
+    cursor: pointer;
+    background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM0MS4zMzMgMzQxLjMzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzQxLjMzMyAzNDEuMzMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTE3MC42NjcsMEM3Ni40MSwwLDAsNzYuNDEsMCwxNzAuNjY3czc2LjQxLDE3MC42NjcsMTcwLjY2NywxNzAuNjY3czE3MC42NjctNzYuNDEsMTcwLjY2Ny0xNzAuNjY3UzI2NC45MjMsMCwxNzAuNjY3LDB6ICAgICBNMTcwLjY2NywyOTguNjY3Yy03MC42OTIsMC0xMjgtNTcuMzA4LTEyOC0xMjhzNTcuMzA4LTEyOCwxMjgtMTI4czEyOCw1Ny4zMDgsMTI4LDEyOFMyNDEuMzU5LDI5OC42NjcsMTcwLjY2NywyOTguNjY3eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) no-repeat;
+    background-size: contain;
+}
+main div.gl_button:hover {
+    height: 1.15em;
+    background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDMxLjc0NCAzMS43NDQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjc0NCAzMS43NDQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMTUuODcyLDBDNy4xMiwwLDAsNy4xMiwwLDE1Ljg3MmMwLDguNzUyLDcuMTIsMTUuODczLDE1Ljg3MiwxNS44NzNzMTUuODcyLTcuMTIsMTUuODcyLTE1Ljg3MyAgICBDMzEuNzQ0LDcuMTIsMjQuNjI0LDAsMTUuODcyLDB6IE0xNS44NzIsMjkuMTczYy03LjMzMywwLTEzLjMtNS45NjgtMTMuMy0xMy4zMDFjMC03LjMzMyw1Ljk2Ni0xMy4zLDEzLjMtMTMuMyAgICBzMTMuMyw1Ljk2NiwxMy4zLDEzLjNDMjkuMTcxLDIzLjIwNSwyMy4yMDUsMjkuMTczLDE1Ljg3MiwyOS4xNzN6IiBmaWxsPSIjMDAwMDAwIi8+CgkJPHBhdGggZD0iTTE1Ljg3Miw2LjA5OWMtNS4zODksMC05Ljc3Myw0LjM4NC05Ljc3Myw5Ljc3M2MwLDUuMzg5LDQuMzg0LDkuNzczLDkuNzczLDkuNzczYzUuMzg5LDAsOS43NzItNC4zODUsOS43NzItOS43NzMgICAgQzI1LjY0NSwxMC40ODQsMjEuMjYsNi4wOTksMTUuODcyLDYuMDk5eiBNMTUuODcyLDIzLjA3MmMtMy45NzEsMC03LjIwMS0zLjIyOS03LjIwMS03LjIwMWMwLTMuOTcxLDMuMjMxLTcuMjAxLDcuMjAxLTcuMjAxICAgIGMzLjk3LDAsNy4yLDMuMjMsNy4yLDcuMjAxQzIzLjA3MiwxOS44NDMsMTkuODQyLDIzLjA3MiwxNS44NzIsMjMuMDcyeiIgZmlsbD0iIzAwMDAwMCIvPgoJCTxjaXJjbGUgY3g9IjE1Ljg3MiIgY3k9IjE1Ljg3MiIgcj0iMy43ODMiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K) no-repeat;
+    background-size: contain;
+}
+/*remove the blue border when button pressed*/
+main div.gl_button:focus {
+    outline:0 !important;
+}
+
+main div.gl_button.prev_button {
+}
+main div.gl_button.actual_button {
+}
+main div.gl_button.next_button {
+}
+
+main div.changed_btn_background{
+    background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQyNi42NjcgNDI2LjY2NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDI2LjY2NyA0MjYuNjY3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik0yMTMuMzMzLDEwNi42NjdjLTU4Ljg4LDAtMTA2LjY2Nyw0Ny43ODctMTA2LjY2NywxMDYuNjY3UzE1NC40NTMsMzIwLDIxMy4zMzMsMzIwUzMyMCwyNzIuMjEzLDMyMCwyMTMuMzMzICAgICBTMjcyLjIxMywxMDYuNjY3LDIxMy4zMzMsMTA2LjY2N3oiIGZpbGw9IiMwMDAwMDAiLz4KCQkJPHBhdGggZD0iTTIxMy4zMzMsMEM5NS40NjcsMCwwLDk1LjQ2NywwLDIxMy4zMzNzOTUuNDY3LDIxMy4zMzMsMjEzLjMzMywyMTMuMzMzUzQyNi42NjcsMzMxLjIsNDI2LjY2NywyMTMuMzMzICAgICBTMzMxLjIsMCwyMTMuMzMzLDB6IE0yMTMuMzMzLDM4NGMtOTQuMjkzLDAtMTcwLjY2Ny03Ni4zNzMtMTcwLjY2Ny0xNzAuNjY3UzExOS4wNCw0Mi42NjcsMjEzLjMzMyw0Mi42NjcgICAgIFMzODQsMTE5LjA0LDM4NCwyMTMuMzMzUzMwNy42MjcsMzg0LDIxMy4zMzMsMzg0eiIgZmlsbD0iIzAwMDAwMCIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K) no-repeat;
+    background-size: contain;
+}
+
+
+main div.mid_right_active{
+    /*box-shadow: #666 1px 1px 2px 2px;*/
+    position: relative;
+    background-color: rgba(9, 9, 41, 0.85);
+    /*background-color: #202021;*/
+    background-size: cover;
+    border-left: 2px black solid;
+    /*change height on media-queries*/
+    /*height: 17em;*/
+}
+main div.mid_right_active label.mid_right_main_label{
+    position: absolute;
+    color: white;
+    top: 3%;
+    left: 5%;
+}
+main div.mid_right_active .rand_car_details_container{
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 5%;
+    border: white 1px solid;
+    /*background: rgba(154, 154, 154, 0.44);*/
+    background: rgba(0, 72, 144, 0.61);
+    box-shadow: #adadad -1px 1px 2px 2px, #adadad 1px 1px 2px 2px;
+    padding: 5px;
+    line-height: 1.15em;
+    min-width: 35%;
+    height: 11.5em;
+    overflow: hidden;
+}
+main div.mid_right_active label.rand_car_details{
+    font-size: 0.7em;
+    float: left;
+    text-shadow:-2px 1px 2px #1b1b1b;
+}
+
+main div.mid_right_active label.rand_car_details_content{
+    font-size: 0.7em;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 1.2em;
+    float: right;
+    text-shadow:-2px 1px 2px #101010;
+
+}
+main div a.rand_car_btn{
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.7em;
+    text-shadow: 2px 2px 2px #506eb4;
+    background: #e8e8e8;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.3em 0.7em;
+    text-decoration: none;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+main div a.rand_car_btn:hover{
+    cursor: pointer;
+    border:2px solid #ffffff;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #000000;
+    background: #004890;
+    /*text-shadow:none;*/
+}
+
+main div a.rand_car_check_btn{
+    position: absolute;
+    bottom: 3%;
+    left: 4%;
+    /*max-width: 30%;*/
+}
+main div a.rand_car_check_btn:focus{
+    outline:0 !important;
+    color: white;
+}
+main div a.rand_car_next_btn{
+    position: absolute;
+    bottom: 3%;
+    left: 55%;
+}
+main div a.rand_car_next_btn:focus{
+    outline:0 !important;
+}
+
+
+main div.usedCarAdd{
+    position: absolute;
+    top: 10%;
+    max-width: 40%;
+    right: 5%;
+    /*border: solid 1px white;*/
+    max-height: 12em;
+}
+#car_cover_image_holder{
+    border: 2px solid #ffffff;
+    margin-bottom: .5em;
+    background-color: darkblue;
+    text-align: center;
+}
+#smallCar_First{
+    height: 8em;
+    width: auto;
+    background: url("images/used_car_example/ford_focus_2011_front.jpg") center;
+    background-size: cover;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
+#smallCar_First:hover{
+    -webkit-filter: blur(1px);
+    filter: blur(0);
+}
+#smallCar_First_big{
+    background: url("images/used_car_example/ford_focus_2011_front.jpg") center;
+    background-size: cover;
+    position: absolute;
+    display: none;
+    /*it is the way to do something similar in CSS than what we can do in JS by onmouse events*/
+    left: -180%;
+    top: 0;
+    width: auto;
+    height: 12em;
+    /*now int this situation the transition isn't look well*/
+    /*-webkit-transition:width 0.3s linear 0s;*/
+    /*transition:width 0.3s linear 0s;*/
+    z-index:5;
+    /*create double-border effect*/
+    border: black 4px solid;
+    outline: white 2px solid;
+    box-shadow: 0 0 0 6px hsl(0, 0%, 0%);
+}
+
+#zoom_btn{
+    background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPHBhdGggZD0iTTUwLDEwMEMyMi40MywxMDAsMCw3Ny41NywwLDUwQzAsMjIuNDMsMjIuNDMsMCw1MCwwYzI3LjU3LDAsNTAsMjIuNDMsNTAsNTBDMTAwLDc3LjU3LDc3LjU3LDEwMCw1MCwxMDB6IE01MCw2ICAgICBDMjUuNzM4LDYsNiwyNS43MzgsNiw1MGMwLDI0LjI2MiwxOS43MzgsNDQsNDQsNDRjMjQuMjYyLDAsNDQtMTkuNzM4LDQ0LTQ0Qzk0LDI1LjczOCw3NC4yNjIsNiw1MCw2eiIgZmlsbD0iIzAwMDAwMCIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBhdGggZD0iTTYyLjA1MSwyNy4yMDZjLTkuNjA1LTkuNjA4LTI1LjIzOC05LjYwOC0zNC44NDUsMGMtOS42MDcsOS42MDctOS42MDcsMjUuMjM5LDAsMzQuODQ1ICAgICBjOS4yNzcsOS4yNzgsMjQuMTcyLDkuNTk2LDMzLjgzNSwwLjk1M2wxLjk1MywxLjk1M2MtMC40ODYsMS4yNDYtMC4yMywyLjcxMywwLjc3MywzLjcxOWwxMC4zMDksMTAuMzA5ICAgICBjMS4zNTUsMS4zNTQsMy41NTMsMS4zNTQsNC45MDYsMGMxLjM1NC0xLjM1NCwxLjM1NC0zLjU1MywwLTQuOTA2TDY4LjY3Niw2My43N2MtMS4wMDYtMS4wMDYtMi40NzQtMS4yNi0zLjcxOC0wLjc3MSAgICAgbC0xLjk1NC0xLjk1NUM3MS42NDYsNTEuMzc4LDcxLjMyOSwzNi40ODMsNjIuMDUxLDI3LjIwNnogTTMwLjE1LDU5LjEwN2MtNy45ODQtNy45ODMtNy45ODQtMjAuOTc0LDAtMjguOTU4ICAgICBjNy45ODMtNy45ODQsMjAuOTc0LTcuOTgzLDI4Ljk1OCwwYzcuOTgyLDcuOTgzLDcuOTgyLDIwLjk3MywwLDI4Ljk1OEM1MS4xMjQsNjcuMDkyLDM4LjEzNCw2Ny4wOTIsMzAuMTUsNTkuMTA3eiIgZmlsbD0iIzAwMDAwMCIvPgoJCQk8cGF0aCBkPSJNMzUuMDE1LDM0LjgzNmMzLjQ4Ny0zLjQ4Nyw3LjU0LTYuMDE5LDExLjgwMi03LjU5N2MtNC44MjgtMC4yNzUtMTAsMS42MDQtMTMuOTY3LDUuNTcxICAgICBjLTQuMDIzLDQuMDIzLTUuODk2LDkuMjgzLTUuNTU1LDE0LjE3QzI4Ljg2LDQyLjU5MywzMS40MzQsMzguNDE3LDM1LjAxNSwzNC44MzZ6IiBmaWxsPSIjMDAwMDAwIi8+CgkJPC9nPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) center no-repeat;
+    background-size: contain;
+    /*background-size: cover;*/
+    position: absolute;
+    /*background: url("icons/magnifier-with-an-eye.svg") no-repeat top left;*/
+    width: 2em;
+    height: 2em;
+    top: 5%;
+    left: 5%;
+    border: none;
+    cursor: pointer;
+}
+
+#zoom_btn:hover + #smallCar_First_big{
+    display: block;
+    width: 165%;
+}
+/*images with horizontal scroll*/
+main div.car_gallery_small_images {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+}
+main div.cont {
+    display: inline-block;
+}
+
+main div.car_gal_img{
+    width: 3.3em;
+    height: 2.5em;
+    border: 1px white solid;
+    cursor: pointer;
+}
+
+#car_thumb_one{
+    background: url("images/used_car_example/ford_focus_2011_front.jpg") center;
+    background-size: cover;
+}
+#car_thumb_two{
+    background: url("images/used_car_example/ford_focus_2011_front_left.jpg") center;
+    background-size: cover;
+}
+#car_thumb_three{
+    background: url("images/used_car_example/ford_focus_2011_front_right.jpg") center;
+    background-size: cover;
+}
+#car_thumb_four{
+    background: url("images/used_car_example/ford_focus_2011_back_left.jpg") center;
+    background-size: cover;
+}
+#car_thumb_five{
+    background: url("images/used_car_example/ford_focus_2011_back_right.jpg") center;
+    background-size: cover;
+}
+#car_thumb_six{
+    background: url("images/used_car_example/ford_focus_2011_inside_front.jpg") center;
+    background-size: cover;
+}
+
+
+
+main div.container_mid_second{
+    margin-bottom: 5px;
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: #303030 1px 1px 2px 2px, #303030 -1px 1px 2px 2px;
+    min-height: 7em;
+    height: 7em;
+    border: 2px solid #000000;
+    background: #0e0d41;
+    background: -webkit-linear-gradient(rgba(9, 9, 41, 0.85), #5382f1);
+    background: -o-linear-gradient(rgba(9, 9, 41, 0.85), #5382f1);
+    background: -moz-linear-gradient(rgba(9, 9, 41, 0.85), #5382f1);
+    background: linear-gradient(rgba(9, 9, 41, 0.85), #5382f1);
+}
+#search_field_label_container{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+#search_field_label{
+    text-shadow: black 2px 2px 2px;
+    letter-spacing: 5px;
+}
+div label span.small_arrow_span{
+    font-size: 0.9em;
+    color: red;
+    font-weight: bolder;
+}
+div label span.mid_arrow_span{
+    font-size: 1.1em;
+    color: red;
+    font-weight: bolder;
+}
+div label span.big_arrow_span{
+    font-size: 1.3em;
+    color: red;
+    font-weight: bolder;
+}
+.find_class_label_text{
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+}
+main div hr.hr_half_width{
+    color: white;
+    max-width: 70%;
+    border : 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0),
+    rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+    margin-bottom: -0.4em;
+}
+
+main div.mid_center{
+    margin-left: 16.6%;
+}
+main div form.search_area_form{
+    width: 100%;
+    display: block;
+
+}
+main div.search_cols{
+    text-align: left;
+}
+
+
+main div label.search_labels{
+    font-weight: bolder;
+    font-size: 1.1em;
+    font-family: monospace;
+    /*margin-left: 5%;*/
+    color: white;
+    text-shadow: black 3px 3px 4px;
+}
+
+input {
+    overflow: visible;
+}
+
+input[type=text]:enabled {
+    background: #ffffff;
+}
+
+input[type=text]:disabled {
+    background: #c2c2c2;
+}
+
+main div input.search_input_fields{
+    display: block;
+    width: 60%;
+    margin-top: 0.3em;
+    font-size: 0.8em;
+    padding-left: 2px;
+    height: 1.3em;
+    font-weight: 400;
+    border: black 1px solid !important;
+    box-shadow: #1b1b1b 2px 2px 2px;
+    transition: width 0.4s ease-in-out;
+}
+main div input.search_input_fields:hover{
+    width: 90%;
+    transition: width 0.4s ease-in-out;
+}
+
+#div_car_model{
+
+}
+
+main div select.search_select_fields{
+    display: block;
+    width: 90%;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    padding: 0;
+    height: 1.3em;
+    font-weight: 400;
+    border: black 1px solid !important;
+    box-shadow: #1b1b1b 2px 2px 2px;
+    /*transition: width 0.4s ease-in-out;*/
+}
+
+main div input.search_area_btn{
+    display: block;
+    width: 90%;
+    margin-top: 0.3em;
+    font-size: 1em;
+    font-weight: bolder;
+    text-shadow: 3px 2px 4px #506eb4;
+    background: #e8e8e8;
+    border: black 3px solid !important;
+    border-radius: 5px;
+    box-shadow: #1b1b1b 2px 2px 2px;
+}
+main div input.search_area_btn:hover{
+    color: white;
+    background: #004890 ;
+    text-shadow: black 2px 2px 2px;
+}
+main div.container_mid_third{
+
+}
+main div.bottom_center{
+    min-height: 100px;
+    height: 15%;
+    border: 1px solid green;
+    overflow: hidden;
+}
+
+
+/*-----------------------------------------------------------*/
+/**/
+/*-----------------------------------------------------------*/
+/*create media query at 1100px  */
+/*create media query at 1100px  */
+@media screen and (max-width:1100px){
+
+    div.siteNameText{
+        text-align: center;
+        font-size: 1.8em;
+        letter-spacing: 0;
+    }
+    /*div.detailsContainer{*/
+        /*margin-right: 10%;*/
+    /*}*/
+
+    nav ul.top_nav li{
+        font-size: 0.85em;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
+
+}
+
+/*create media query at 680px*/
+@media screen and (max-width:680px){
+
+    div.siteNameText{
+        text-align: center;
+        font-size: 1.5em;
+        letter-spacing: 0;
+    }
+    .logoClass {
+        height: 60px;
+    }
+    /*.header_back{*/
+        /*width: 100%;*/
+        /*height: 120px;*/
+    /*}*/
+
+    ul.top_nav li:not(:nth-child(1)){
+        display: none;
+    }
+    ul.top_nav li.drop_down_Icon{
+        /*change the trigram icon to visible by display:*/
+        display: block;
+        float: right;
+    }
+
+    ul.top_nav.responsive{
+        position: relative;
+    }
+    ul.top_nav.responsive li{
+        display: inline;
+        float: none;
+    }
+    ul.top_nav.responsive li a{
+        display: block;
+        text-align: right;
+
+    }
+    ul.top_nav.responsive li a:hover{
+        background: blue;
+        border-top: 1px black solid;
+        border-bottom: 1px black solid;
+    }
+
+    ul.top_nav.responsive li.drop_downIcon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+
+/* base64 icons generated on www.flaticon.com*!*/

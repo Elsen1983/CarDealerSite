@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- Html -->
+<html lang="eng">
+
+    <!-- Head -->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Norbert Korom" />
+        <meta name="copyright" content="Norbert Korom" />
+        <meta name="keywords" content="write here the keywords which usually used on the site" />
+        <meta name="description" content="write here one sentence about the page (8-10 word)" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Summer Project</title>
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Monoton|Russo+One" rel="stylesheet">
+        <!--font-family: 'Russo One', sans-serif;
+            font-family: 'Monoton', cursive;
+            font-family: 'Audiowide', cursive;-->
+        <link rel="stylesheet" href="myStyle.css">
+    </head>
+
+    <!-- Body -->
+    <body >
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <!-- Header-->
+    <header>
+    <div class="container_top" id="container_top_gradient">
+        <div class="row">
+            <div class="col-4">
+                <div class="logoContainer">
+                    <img class="logoClass" src="JP_Logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="siteNameText">
+                    <label><strong>JP</strong> MOTORS</label>
+                </div>
+            </div>
+            <div class="col-4">
+                    <div class="detailsContainer">
+                        <label>CHURCH LANE SOUTH, BANDON</label><br>
+                        <label>087 737 4936</label><br>
+                        <label>jpmotors@gmail.com </label>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+        <!-- Nav -->
+        <nav>
+            <ul class="top_nav" id="drop_down_Click">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="#used_car">Used Cars</a></li>
+                <li><a href="#repair">Repair</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#valeting">Valeting</a></li>
+                <li class="top_nav_right"><a href="#contact">Contact</a></li>
+                <!-- for the unique symbol visit the https://unicode-table.com/en/ and search for "trigram" and copy the html code -->
+                <li class="drop_down_Icon"><a href="#" onclick="drop_down_Menu()">&#9776;</a></li>
+            </ul>
+
+        </nav>
+
+
+
+    <!-- Main -->
+    <main>
+        <div class="header_back"></div>
+        <div class="container_mid_first">
+            <div class="row not_center">
+                <!--<div class="col-1"></div>-->
+                <div class="col-6">
+                        <div id="ml_id1" class="mid_left_active middle" >
+                            <a class="ml_button1" href="#">Press me</a>
+                            <div class="mid_left_one_buttons">
+                                <div class="gl_button prev_button changed_btn_background" onclick="changeAdds(this)"></div>
+                                <div class="gl_button actual_button" onclick="changeAdds(this)"></div>
+                                <div class="gl_button next_button" onclick="changeAdds(this)"></div>
+                            </div>
+                        </div>
+                        <div id="ml_id2" class="mid_left_one middle" >
+                            <a class="ml_button1" href="#">Press me</a>
+                            <div class="mid_left_one_buttons">
+                                <div class="gl_button prev_button" onclick="changeAdds(this)"></div>
+                                <div class="gl_button actual_button changed_btn_background" onclick="changeAdds(this)"></div>
+                                <div class="gl_button next_button" onclick="changeAdds(this)"></div>
+                            </div>
+                        </div>
+                        <div id="ml_id3" class="mid_left_two middle" >
+                            <a class="ml_button1" href="#">Press me</a>
+                            <div class="mid_left_one_buttons">
+                                <div class="gl_button prev_button" onclick="changeAdds(this)"></div>
+                                <div class="gl_button actual_button" onclick="changeAdds(this)"></div>
+                                <div class="gl_button next_button changed_btn_background" onclick="changeAdds(this)"></div>
+                            </div>
+                        </div>
+
+
+                </div>
+                <div class="col-6">
+                    <div class="mid_right_active middle">
+                        <!--<img id="mid_right_image" src="" alt="graybckgr">-->
+                        <label class="mid_right_main_label">Ford Focus (2011)</label>
+                        <div class="rand_car_details_container">
+                        <label class="rand_car_details">Make:</label>
+                            <label class="rand_car_details_content">Ford</label><br>
+                        <label class="rand_car_details">Model:</label>
+                            <label class="rand_car_details_content">Focus</label><br>
+                        <label class="rand_car_details">Year:</label>
+                            <label class="rand_car_details_content">2011</label><br>
+                        <label class="rand_car_details">Fuel type:</label>
+                            <label class="rand_car_details_content">Petrol</label><br>
+                        <label class="rand_car_details">Engine:</label>
+                            <label class="rand_car_details_content">1.4</label><br>
+                        <label class="rand_car_details">Transmission:</label>
+                            <label class="rand_car_details_content">Manual</label><br>
+                        <label class="rand_car_details">Body type:</label>
+                            <label class="rand_car_details_content">Hatchback</label><br>
+                        <label class="rand_car_details">NCT due date:</label>
+                            <label class="rand_car_details_content">08/2020</label><br>
+                            <label class="rand_car_details">Mileage:</label>
+                            <label class="rand_car_details_content">155.000</label><br>
+                        <label class="rand_car_details">Price:</label>
+                            <label class="rand_car_details_content">14.500 £</label><br>
+                        </div>
+                        <div>
+                            <a class="rand_car_check_btn rand_car_btn">CHECK THIS CAR</a>
+                        </div>
+                        <div>
+                            <a class="rand_car_next_btn rand_car_btn">ANOTHER CAR</a>
+                        </div>
+                        <div class="usedCarAdd">
+                            <div id="car_cover_image_holder">
+                                <div id="smallCar_First" src="images/used_car_example/ford_focus_2011_front.jpg" alt="old_car"></div>
+                                <div id="zoom_btn" src="icons/magnifier-with-an-eye.svg"></div>
+                                <div id="smallCar_First_big" src="images/used_car_example/ford_focus_2011_front.jpg" alt="old_car"></div>
+
+                            </div>
+                            <div class="car_gallery_small_images">
+                                <div class="cont">
+                                    <div id="car_thumb_one" class="car_gal_img" onclick="change_randCar_mainImage(this)"></div>
+                                </div>
+                                <div class="cont">
+                                    <div id="car_thumb_two" class="car_gal_img"></div>
+                                </div>
+                                <div class="cont">
+                                    <div id="car_thumb_three" class="car_gal_img"></div>
+                                </div>
+                                <div class="cont">
+                                    <div id="car_thumb_four" class="car_gal_img"></div>
+                                </div>
+                                <div class="cont">
+                                    <div id="car_thumb_five" class="car_gal_img"></div>
+                                </div>
+                                <div class="cont">
+                                    <div id="car_thumb_six" class="car_gal_img"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--<div class="col-1"></div>-->
+            </div>
+        </div>
+        <div class="container_mid_second">
+            <div class="row">
+                <div class="col-12">
+                    <div id="search_field_label_container">
+                        <label id="search_field_label">
+                            <span class="small_arrow_span"> &#8595;</span>
+                            <span class="mid_arrow_span"> &#8595;</span>
+                            <span class="big_arrow_span"> &#8595;</span>
+                            <span class="find_class_label_text">&#8195;== FIND YOUR CAR ==&#8195; </span>
+                            <span class="big_arrow_span">&#8595;</span>
+                            <span class="mid_arrow_span">&#8595;</span>
+                            <span class="small_arrow_span">&#8595;</span>
+                        </label>
+                        <hr class="hr_half_width">
+                    </div>
+                </div>
+            </div>
+                    <br>
+                    <div class="mid_center">
+                        <form class="search_area_form">
+                        <div class="row">
+                            <div id="div_car_make" class="col-2 search_cols">
+                                    <label class="search_labels">MAKE</label>
+                                    <br>
+                                    <input id="car_make_input"  type="text" class="search_input_fields"  list="car_make_list" placeholder="Ford, BMW, ..." title="make">
+                                    <datalist id="car_make_list"></datalist>
+                            </div>
+                            <div id="div_car_model" class="col-2 search_cols">
+                                    <label class="search_labels">MODEL</label>
+                                    <br>
+                                    <input id="car_model_input" type="text" class="search_input_fields" list="car_model_list" title="model" disabled="disabled">
+                                    <datalist id="car_model_list"></datalist>
+                            </div>
+                            <div id="div_car_year" class="col-2 search_cols">
+                                    <label class="search_labels">YEAR</label>
+                                    <br>
+                                    <input id="car_year_input" type="number" min="2000" max="2018" class="search_input_fields" list="car_year_list" title="year">
+                                    <datalist id="car_year_list"></datalist>
+                            </div>
+                            <div class="col-2 search_cols">
+                                    <label class="search_labels">PRICE </label>
+                                    <br>
+                                <select class="search_select_fields" title="price">
+                                    <option value="low_budget">0 - 500 &euro;</option>
+                                    <option value="cheap">500 - 1000 &euro;</option>
+                                    <option value="normal">1000 - 3000 &euro;</option>
+                                    <option value="costly">3000 - 5000 &euro;</option>
+                                    <option value="expensive">5000 - 10000 &euro;</option>
+                                </select>
+                                    <datalist id="car_price_list"></datalist>
+                            </div>
+                            <div class="col-2 ">
+                                <label class="search_labels"></label>
+                                <br>
+                                <input type="button" value="SEARCH" onclick="" class="search_area_btn">
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+        <div class="container_mid_third">
+            <div class="row">
+                <div class="col-12">
+                    <details>
+                        <summary>About CSSPortal</summary>
+                        <img src="images/used_car_example/ford_focus_2011_inside_front.jpg">
+                        <p>CSSPortal is a site dedicated to helping you with CSS.</p>
+                    </details>
+
+                    <div class="bottom_center">
+                        <img src="images/used_cars.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="bottom_center">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="bottom_center">
+                        <img src="images/used_cars.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+    <script src="myJS.js"></script>
+    </body>
+
+</html>
