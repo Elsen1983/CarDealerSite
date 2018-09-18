@@ -15,7 +15,7 @@ let interval_background_change;
 let myObj = "";
 let years_list = [];
 
-
+//add event listener to the year input field
 document.getElementById("car_year_input").addEventListener('mouseover', populate_year_list);
 
 
@@ -28,6 +28,7 @@ window.onload = function() {
 
 };
 
+// INIT
 function init(){
     //check that the tree images for the mid_left changer div are loaded or not
     image_loader_one();
@@ -35,7 +36,9 @@ function init(){
     image_loader_three();
 }
 
+//FUNCTIONS
 
+//home page left side image one loader
 function image_loader_one() {
     let mid_left_img_one = new Image();
     mid_left_img_one.onload = function(){
@@ -47,6 +50,8 @@ function image_loader_one() {
     };
     mid_left_img_one.src = dir + '001_m.jpg';
 }
+
+//home page left side image two loader
 function image_loader_two() {
     let mid_left_img_two = new Image();
     mid_left_img_two.onload = function(){
@@ -57,6 +62,8 @@ function image_loader_two() {
     };
     mid_left_img_two.src = dir + '002_m.jpg';
 }
+
+//home page left side image three loader
 function image_loader_three() {
     let mid_left_img_three = new Image();
     mid_left_img_three.onload = function(){
@@ -68,6 +75,7 @@ function image_loader_three() {
     mid_left_img_three.src = dir + '003_m.jpg';
 }
 
+//check home page left side all of the tree image is loaded (use booleans)
 function image_loader_all_checker() {
 
     let button_holder = document.getElementsByClassName('mid_left_one_buttons');
@@ -90,7 +98,7 @@ function image_loader_all_checker() {
     }
 }
 
-//function to change the div-adds repeatedly
+//function to change the home page left side 'div-adds' repeatedly
 function background_div_changer() {
     //div one
     if(ml_one.className === 'mid_left_active middle'){
@@ -191,16 +199,13 @@ function changeAdds(x){
     //start the background changer function 5 sec later
     //window.setTimeout(window.setInterval(background_div_changer, 5000), 5000);
 }
+
 //stop the background changer function cycle
 function stopInterval() {
     clearInterval(interval_background_change);
 }
-//function for random car section on Home page
-function change_randCar_mainImage(x) {
-    let small_Img_id = x.parentNode.className;
-    console.log(small_Img_id);
-}
 
+//drop-down menu for mobile version (below 680px)
 function drop_down_Menu(){
     var x = document.getElementById("drop_down_Click");
     /*change top_nav to top_nav.responsive*/
@@ -227,8 +232,10 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
+//add or remove datalist to/from the car make input field (depends it exist or not)
 function car_make_list() {
 
+    //create the myObj from JSON here, before I add the event listener (mouseover) to the car make input field
     readTextFile("cars_data.json", function(text){
         myObj = JSON.parse(text);
     });
@@ -248,6 +255,7 @@ function car_make_list() {
     }
 }
 
+//generate list for the car input field from the myOBJ (which was created from a JSON file) and populate them into html datalist
 function add_car_make_datalist(){
 
     //do this double check on the element exist to make sure not create duplication in DOM
@@ -263,8 +271,8 @@ function add_car_make_datalist(){
             makeData += "<option>" + make_name + "</option>";
         }
         document.getElementById("car_make_list").innerHTML = makeData;
-        /* event listener */
-        document.getElementById("car_make_input").addEventListener('input', input_change);
+        // event listener
+        document.getElementById("car_make_input").addEventListener('input', add_car_model_datalist);
 
         //add a mouse-leave and on-focus-out event listeners to the make input field with an inner function
         document.getElementById("car_make_input").addEventListener('mouseleave', car_model_clear_and_disable);
@@ -280,7 +288,8 @@ function add_car_make_datalist(){
     }
 }
 
-function input_change() {
+// add or change the car model input datalist (the data is depends on which car make was selected)
+function add_car_model_datalist() {
 
     //enable the model field
     document.getElementById("car_model_input").disabled = false;
@@ -323,6 +332,7 @@ function input_change() {
     }
 }
 
+//generate numbers between 2000 and 2018 and push them into the car year input datalist
 function populate_year_list() {
 
     if(document.getElementById("car_year_input").value === "") {
@@ -338,12 +348,10 @@ function populate_year_list() {
             document.getElementById("car_year_list").remove();
             console.log("car year list deleted");
 
-
             var datalist_tag = document.createElement("DATALIST");
             datalist_tag.setAttribute("id", "car_year_list");
             document.getElementById("div_car_year").appendChild(datalist_tag);
             console.log("car year list created");
-
 
             let array_pos = 0;
             let year_opt = "";
@@ -358,27 +366,37 @@ function populate_year_list() {
 
             console.log("list of years: " + years_list);
 
-
             for(let i=0; i<years_list.length; i++){
 
                 document.getElementById("car_year_input").value = "";
                 year_opt +=  "<option>" + years_list[i] + "</option>";
                 document.getElementById("car_year_list").innerHTML = year_opt;
             }
-
         }
     }else{
         console.log(document.getElementById("car_year_input").value);
     }
+}
 
 
+//function for random car section on Home page
+function change_randCar_mainImage_to_selectedImage(x) {
+    let small_Img_id = x.id;
+    let big_Img_id = document.getElementById("smallCar_First");
+    let big_Img_Zoom_id = document.getElementById("smallCar_First_big");
+    console.log(small_Img_id);
+
+    let selectedIMG_src = x.src
+    // document.getElementById("car_thumb_one").style.background = "images/used_car_example/ford_focus_2011_front_left.jpg";
+    console.log("background source:"+ selectedIMG_src);
+    big_Img_id.src = x.src;
+    big_Img_Zoom_id.src = x.src;
 
 
 }
 
 
-
 // Resources:
-////http://blog.teamtreehouse.com/learn-asynchronous-image-loading-javascript
+//http://blog.teamtreehouse.com/learn-asynchronous-image-loading-javascript
 
 

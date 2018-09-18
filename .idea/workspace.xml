@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98cc3dac-78ea-44be-8241-5b8ff9f7e4aa" name="Default" comment="" />
+    <list default="true" id="98cc3dac-78ea-44be-8241-5b8ff9f7e4aa" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/myJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/myStyle.css" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,10 +29,12 @@
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.33" value="2" />
           <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.60" value="1" />
+          <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.84" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,42 +59,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="7871" />
+          <entry key="css" value="7986" />
           <entry key="dummy" value="13" />
-          <entry key="html" value="4224" />
-          <entry key="js" value="7326" />
+          <entry key="html" value="4331" />
+          <entry key="js" value="8480" />
           <entry key="json" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="7871" />
-          <entry key="HTML" value="4239" />
+          <entry key="CSS" value="7986" />
+          <entry key="HTML" value="4346" />
           <entry key="JSON" value="112" />
-          <entry key="JavaScript" value="7311" />
+          <entry key="JavaScript" value="8465" />
           <entry key="PLAIN_TEXT" value="13" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.52970296">
+    <splitter split-orientation="vertical" split-proportion="0.820132">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.5129274">
+        <splitter split-orientation="horizontal" split-proportion="0.5756824">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/index.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="145">
-                      <caret line="196" column="64" selection-start-line="196" selection-start-column="64" selection-end-line="196" selection-end-column="64" />
-                      <folding>
-                        <element signature="e#11616#11622#0" expanded="true" />
-                        <element signature="e#11698#11704#0" expanded="true" />
-                        <element signature="e#11781#11787#0" expanded="true" />
-                        <element signature="e#11864#11870#0" expanded="true" />
-                        <element signature="e#11950#11956#0" expanded="true" />
-                      </folding>
+                    <state relative-caret-position="281">
+                      <caret line="135" column="61" lean-forward="true" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
                     </state>
                   </provider>
                 </entry>
@@ -99,13 +99,10 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/myStyle.css">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="7">
-                      <caret line="580" column="1" selection-start-line="580" selection-start-column="1" selection-end-line="580" selection-end-column="1" />
+                    <state relative-caret-position="154">
+                      <caret line="456" column="1" lean-forward="true" selection-start-line="456" selection-start-column="1" selection-end-line="456" selection-end-column="1" />
                       <folding>
                         <element signature="e#5680#6816#1" expanded="true" />
-                        <element signature="e#6993#8829#1" expanded="true" />
-                        <element signature="e#8673#10085#1" expanded="true" />
-                        <element signature="e#13329#15593#1" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -120,16 +117,21 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/myJS.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-460">
-                  <caret line="270" column="108" lean-forward="true" selection-start-line="270" selection-start-column="108" selection-end-line="270" selection-end-column="108" />
+                <state relative-caret-position="452">
+                  <caret line="394" lean-forward="true" selection-start-line="394" selection-end-line="394" />
                   <folding>
+                    <element signature="e#453#578#0" />
+                    <element signature="n#!!block;n#init#0" />
+                    <element signature="n#!!block;n#image_loader_one#0" />
+                    <element signature="n#!!block;n#image_loader_two#0" />
+                    <element signature="n#!!block;n#image_loader_three#0" />
+                    <element signature="n#!!block;n#image_loader_all_checker#0" />
                     <element signature="n#!!block;n#background_div_changer#0" />
                     <element signature="n#!!block;n#changeAdds#0" />
                     <element signature="n#!!block;n#stopInterval#0" />
-                    <element signature="n#!!block;n#change_randCar_mainImage#0" />
                     <element signature="n#!!block;n#drop_down_Menu#0" />
                     <element signature="n#!!block;n#readTextFile#0" />
-                    <element signature="n#!!block;n#car_make_list#0" />
+                    <element signature="n#!!block;n#input_change#0" />
                     <element signature="n#!!block;n#populate_year_list#0" />
                   </folding>
                 </state>
@@ -172,15 +174,18 @@
       <find>selected</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Node_files/my_first_module.js" />
         <option value="$PROJECT_DIR$/Node_files/my_first_node_file.js" />
         <option value="$PROJECT_DIR$/cars_data.json" />
-        <option value="$PROJECT_DIR$/myStyle.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/myJS.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/myStyle.css" />
       </list>
     </option>
   </component>
@@ -195,11 +200,13 @@
     <option name="width" value="1294" />
     <option name="height" value="577" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,7 +229,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -337,11 +343,13 @@
       <workItem from="1535804250903" duration="104899000" />
       <workItem from="1536940385656" duration="4905000" />
       <workItem from="1537017294637" duration="22620000" />
+      <workItem from="1537172833371" duration="581000" />
+      <workItem from="1537258338876" duration="12470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292165000" />
+    <option name="totallyTimeSpent" value="305216000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -353,10 +361,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1078869" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.100446425" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -366,7 +374,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32838285" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -412,46 +420,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myStyle.css">
+    <entry file="file://$PROJECT_DIR$/myJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="580" column="1" selection-start-line="580" selection-start-column="1" selection-end-line="580" selection-end-column="1" />
+        <state relative-caret-position="452">
+          <caret line="394" lean-forward="true" selection-start-line="394" selection-end-line="394" />
           <folding>
-            <element signature="e#5680#6816#1" expanded="true" />
-            <element signature="e#6993#8829#1" expanded="true" />
-            <element signature="e#8673#10085#1" expanded="true" />
-            <element signature="e#13329#15593#1" expanded="true" />
+            <element signature="e#453#578#0" />
+            <element signature="n#!!block;n#init#0" />
+            <element signature="n#!!block;n#image_loader_one#0" />
+            <element signature="n#!!block;n#image_loader_two#0" />
+            <element signature="n#!!block;n#image_loader_three#0" />
+            <element signature="n#!!block;n#image_loader_all_checker#0" />
+            <element signature="n#!!block;n#background_div_changer#0" />
+            <element signature="n#!!block;n#changeAdds#0" />
+            <element signature="n#!!block;n#stopInterval#0" />
+            <element signature="n#!!block;n#drop_down_Menu#0" />
+            <element signature="n#!!block;n#readTextFile#0" />
+            <element signature="n#!!block;n#input_change#0" />
+            <element signature="n#!!block;n#populate_year_list#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="196" column="64" selection-start-line="196" selection-start-column="64" selection-end-line="196" selection-end-column="64" />
-          <folding>
-            <element signature="e#11616#11622#0" expanded="true" />
-            <element signature="e#11698#11704#0" expanded="true" />
-            <element signature="e#11781#11787#0" expanded="true" />
-            <element signature="e#11864#11870#0" expanded="true" />
-            <element signature="e#11950#11956#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="281">
+          <caret line="135" column="61" lean-forward="true" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myJS.js">
+    <entry file="file://$PROJECT_DIR$/myStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-460">
-          <caret line="270" column="108" lean-forward="true" selection-start-line="270" selection-start-column="108" selection-end-line="270" selection-end-column="108" />
+        <state relative-caret-position="154">
+          <caret line="456" column="1" lean-forward="true" selection-start-line="456" selection-start-column="1" selection-end-line="456" selection-end-column="1" />
           <folding>
-            <element signature="n#!!block;n#background_div_changer#0" />
-            <element signature="n#!!block;n#changeAdds#0" />
-            <element signature="n#!!block;n#stopInterval#0" />
-            <element signature="n#!!block;n#change_randCar_mainImage#0" />
-            <element signature="n#!!block;n#drop_down_Menu#0" />
-            <element signature="n#!!block;n#readTextFile#0" />
-            <element signature="n#!!block;n#car_make_list#0" />
-            <element signature="n#!!block;n#populate_year_list#0" />
+            <element signature="e#5680#6816#1" expanded="true" />
           </folding>
         </state>
       </provider>

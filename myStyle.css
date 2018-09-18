@@ -398,8 +398,9 @@ main div.usedCarAdd{
 }
 #smallCar_First{
     height: 8em;
-    width: auto;
-    background: url("images/used_car_example/ford_focus_2011_front.jpg") center;
+    width: 100%;
+    /*background: url("images/used_car_example/ford_focus_2011_front.jpg") center;*/
+    background-position: center;
     background-size: cover;
     -webkit-filter: blur(1px);
     filter: blur(1px);
@@ -409,15 +410,15 @@ main div.usedCarAdd{
     filter: blur(0);
 }
 #smallCar_First_big{
-    background: url("images/used_car_example/ford_focus_2011_front.jpg") center;
+    /*background: url("images/used_car_example/ford_focus_2011_front.jpg") center;*/
     background-size: cover;
     position: absolute;
     display: none;
     /*it is the way to do something similar in CSS than what we can do in JS by onmouse events*/
     left: -180%;
     top: 0;
-    width: auto;
-    height: 12em;
+    /*width: 100%;*/
+    /*height: 12em;*/
     /*now int this situation the transition isn't look well*/
     /*-webkit-transition:width 0.3s linear 0s;*/
     /*transition:width 0.3s linear 0s;*/
@@ -428,21 +429,34 @@ main div.usedCarAdd{
     box-shadow: 0 0 0 6px hsl(0, 0%, 0%);
 }
 
+#zoom_btn_holder{
+    background: rgba(173, 173, 173, 0.51);
+    position: absolute;
+    border: #000000 double 1px;
+    width: 1.8em;
+    height: 1.8em;
+    top: 5%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 #zoom_btn{
+    position: relative;
     background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPHBhdGggZD0iTTUwLDEwMEMyMi40MywxMDAsMCw3Ny41NywwLDUwQzAsMjIuNDMsMjIuNDMsMCw1MCwwYzI3LjU3LDAsNTAsMjIuNDMsNTAsNTBDMTAwLDc3LjU3LDc3LjU3LDEwMCw1MCwxMDB6IE01MCw2ICAgICBDMjUuNzM4LDYsNiwyNS43MzgsNiw1MGMwLDI0LjI2MiwxOS43MzgsNDQsNDQsNDRjMjQuMjYyLDAsNDQtMTkuNzM4LDQ0LTQ0Qzk0LDI1LjczOCw3NC4yNjIsNiw1MCw2eiIgZmlsbD0iIzAwMDAwMCIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBhdGggZD0iTTYyLjA1MSwyNy4yMDZjLTkuNjA1LTkuNjA4LTI1LjIzOC05LjYwOC0zNC44NDUsMGMtOS42MDcsOS42MDctOS42MDcsMjUuMjM5LDAsMzQuODQ1ICAgICBjOS4yNzcsOS4yNzgsMjQuMTcyLDkuNTk2LDMzLjgzNSwwLjk1M2wxLjk1MywxLjk1M2MtMC40ODYsMS4yNDYtMC4yMywyLjcxMywwLjc3MywzLjcxOWwxMC4zMDksMTAuMzA5ICAgICBjMS4zNTUsMS4zNTQsMy41NTMsMS4zNTQsNC45MDYsMGMxLjM1NC0xLjM1NCwxLjM1NC0zLjU1MywwLTQuOTA2TDY4LjY3Niw2My43N2MtMS4wMDYtMS4wMDYtMi40NzQtMS4yNi0zLjcxOC0wLjc3MSAgICAgbC0xLjk1NC0xLjk1NUM3MS42NDYsNTEuMzc4LDcxLjMyOSwzNi40ODMsNjIuMDUxLDI3LjIwNnogTTMwLjE1LDU5LjEwN2MtNy45ODQtNy45ODMtNy45ODQtMjAuOTc0LDAtMjguOTU4ICAgICBjNy45ODMtNy45ODQsMjAuOTc0LTcuOTgzLDI4Ljk1OCwwYzcuOTgyLDcuOTgzLDcuOTgyLDIwLjk3MywwLDI4Ljk1OEM1MS4xMjQsNjcuMDkyLDM4LjEzNCw2Ny4wOTIsMzAuMTUsNTkuMTA3eiIgZmlsbD0iIzAwMDAwMCIvPgoJCQk8cGF0aCBkPSJNMzUuMDE1LDM0LjgzNmMzLjQ4Ny0zLjQ4Nyw3LjU0LTYuMDE5LDExLjgwMi03LjU5N2MtNC44MjgtMC4yNzUtMTAsMS42MDQtMTMuOTY3LDUuNTcxICAgICBjLTQuMDIzLDQuMDIzLTUuODk2LDkuMjgzLTUuNTU1LDE0LjE3QzI4Ljg2LDQyLjU5MywzMS40MzQsMzguNDE3LDM1LjAxNSwzNC44MzZ6IiBmaWxsPSIjMDAwMDAwIi8+CgkJPC9nPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) center no-repeat;
     background-size: contain;
     /*background-size: cover;*/
-    position: absolute;
+    /*position: absolute;*/
     /*background: url("icons/magnifier-with-an-eye.svg") no-repeat top left;*/
-    width: 2em;
-    height: 2em;
-    top: 5%;
-    left: 5%;
+    width: 80%;
+    height: 1.5em;
     border: none;
     cursor: pointer;
+    padding-left: 0.36em;
+
 }
 
-#zoom_btn:hover + #smallCar_First_big{
+#zoom_btn_holder:hover + #smallCar_First_big{
     display: block;
     width: 165%;
 }
@@ -458,7 +472,7 @@ main div.cont {
     display: inline-block;
 }
 
-main div.car_gal_img{
+main img.car_gal_img{
     width: 3.3em;
     height: 2.5em;
     border: 1px white solid;
@@ -466,27 +480,33 @@ main div.car_gal_img{
 }
 
 #car_thumb_one{
-    background: url("images/used_car_example/ford_focus_2011_front.jpg") center;
+    /*background: url("images/used_car_example/ford_focus_2011_front.jpg") center;*/
+    background-position: center;
     background-size: cover;
 }
 #car_thumb_two{
-    background: url("images/used_car_example/ford_focus_2011_front_left.jpg") center;
+    /*background: url("images/used_car_example/ford_focus_2011_front_left.jpg") center;*/
+    background-position: center;
     background-size: cover;
 }
 #car_thumb_three{
-    background: url("images/used_car_example/ford_focus_2011_front_right.jpg") center;
+    /*background: url("images/used_car_example/ford_focus_2011_front_right.jpg") center;*/
+    background-position: center;
     background-size: cover;
 }
 #car_thumb_four{
-    background: url("images/used_car_example/ford_focus_2011_back_left.jpg") center;
+    /*background: url("images/used_car_example/ford_focus_2011_back_left.jpg") center;*/
+    background-position: center;
     background-size: cover;
 }
 #car_thumb_five{
-    background: url("images/used_car_example/ford_focus_2011_back_right.jpg") center;
+    /*background: url("images/used_car_example/ford_focus_2011_back_right.jpg") center;*/
+    background-position: center;
     background-size: cover;
 }
 #car_thumb_six{
-    background: url("images/used_car_example/ford_focus_2011_inside_front.jpg") center;
+    /*background: url("images/used_car_example/ford_focus_2011_inside_front.jpg") center;*/
+    background-position: center;
     background-size: cover;
 }
 
